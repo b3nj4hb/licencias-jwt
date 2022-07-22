@@ -1,7 +1,7 @@
 import express from 'express'
 import morgan from 'morgan'
 
-// import auth from './routes/auth.routes'
+import auth from './routes/auth.routes.js'
 import cors from 'cors'
 const app = express();
 // var cors = require('cors');
@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
     res.send('Bienvenido a Node JS..!');
 });
 
-// app.use('/api/auth', auth)
+app.use('/api/auth', auth)
 
 export default app;
